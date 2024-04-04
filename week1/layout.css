@@ -1,0 +1,286 @@
+body {
+    margin: 0;
+    padding:0;
+}
+
+/*mobile&desktop 開關*/
+.desktop_menu {
+    display:block;
+}
+
+.mobile_menu{
+    display:none;
+}
+
+/*first raw*/
+.header {
+    display:flex;
+    margin:10px;
+    height:30px
+
+}
+.left{
+    flex:none;
+    height:30px;
+    width:50%;
+    font-size: 20px;
+
+}
+.right{
+    display:flex;
+    flex:none;
+    width:50%;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 20px;
+}
+
+/*text*/
+.my_web{
+    flex:none;
+    text-align: left;
+    line-height: 30px;
+}
+
+.item{
+    flex:none;
+    width:80px;
+    text-align: center;
+    line-height: 30px;
+}
+
+/*mobile component*/
+.mobile_item{
+    flex:none;
+    width:80px;
+    text-align: center;
+    margin-top:30px;
+    font-size:20px
+}
+.mobile_button{
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    width:30px;
+    height:30px;
+}
+.mobile_menu_icon {
+    background: none;
+    border: none;
+    cursor: pointer; /* 鼠标悬停时显示手型 */
+    padding: 0;
+}
+
+.mobile_menu_content{
+    display: none;
+    align-items: center;
+    width:60%;
+    height: 100%;
+    flex-direction: column;
+    background-color: white;
+    position:fixed;
+    right:0;
+    top:0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 9999;
+}
+/*mobile component_cancel*/
+.mobile_cancel_icon {
+    background: none;
+    border: none;
+    cursor: pointer; /* 鼠标悬停时显示手型 */
+    padding: 0;
+    position: fixed;
+    right:5px;
+    top:5px;
+}
+.cancel_button{
+    width:30px;
+    height:30px;
+}
+
+/*raw2_center*/
+.centered-text {
+    display: flex;
+    justify-content: center; /*水平方向上的对齐方式*/
+    align-items: center ; /*垂直方向上的对齐方式*/
+    background-color: rgb(103, 211, 223) ;
+    height: 250px;
+    font-size: 40px;
+    font-weight:bold;
+    text-align: center;
+}
+
+.content {
+    /*background-color: rgb(223, 103, 211) ;*/
+    margin:20px auto; /*上下留20px, 左右置中*/
+    width: 1200px
+}
+
+.raw_promotion {
+    display:flex;
+    /*background-color: rgb(201, 223, 103) ;*/
+    width: 1200px;
+    margin-left: 0px;
+}
+
+.raw_promotion_small {
+    display:flex;
+    flex:none;
+    width: 380px;
+    margin: 10px;
+   
+
+}
+.image_small {
+    flex: none;
+    width: 80px;
+    height: 50px;
+    /*margin-left:20px;*/
+    background-image: url(image.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center ;
+}
+
+.promotion {
+    flex: auto;
+    background-color: rgb(103, 211, 223) ;
+    /* margin-left: 20px; 设置左邊留白为 10px */
+    text-align: left; /* 文本左对齐 */
+    padding-left: 10px; /* 设置左内边距为 10px，使文本与图片之间保持适当的距离 */
+    display: flex; /* 使用 Flex 布局 */
+    align-items: center; /* 垂直居中 */
+    font-size: 20px;
+}
+
+/*raw 3*/
+.raw_normal {
+    display:flex;
+    flex-wrap: wrap;
+    /*background-color: rgb(201, 223, 103) ;*/
+    width: 1200px;
+    /*margin-left: -10px; 原本是20*/
+    /*margin:10px*/
+   
+}
+
+
+.raw_normal_image_big {
+    flex:none;
+    width: 380px;
+    height: 200px;
+    margin:10px; /*原本是left 20*/
+    background-image: url(image.jpg);
+    background-size: 380px auto;
+    background-repeat: no-repeat;
+    background-position: center ;
+    position: relative;
+}
+
+
+.raw_normal_image_mid {
+    flex: none;
+    width: 180px;
+    height: 200px;
+    margin:10px;/*原本是left 20*/
+    background-image: url(image.jpg);
+    background-size: 380px auto;
+    background-repeat: no-repeat;
+    background-position: center ;
+    position: relative;
+}
+
+
+.image_star{
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-image: url(star.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    position:absolute;
+    top:0;
+    right:0;
+}
+
+
+.title{
+    width: 100%;
+    background-color: rgba(124, 151, 120, 0.5); /* 设置透明黑色背景 */
+    color: rgb(1, 1, 1); /* 设置文字颜色为白色 */
+    text-align: center;
+    font-size: 20px;
+    position:absolute;
+    bottom:0;
+}
+
+@media screen and (max-width: 1200px){
+    .content{
+        flex-wrap: wrap;
+        width: 90%;
+    }
+    .raw_promotion{
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .raw_promotion_small{
+        width:45%;
+        flex-grow: 1;
+    }
+    .raw_normal{
+        flex-wrap:wrap;
+        width:100%;
+    }
+    .raw_normal_image_big{
+        width:20%;
+        flex-grow: 1;
+        background-size: cover;
+    }
+    .raw_normal_image_mid{
+        width:20%;
+        flex-grow: 1;
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .content{
+        flex-wrap: wrap;
+        width: 90%;
+    }
+    .raw_promotion{
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .raw_promotion_small{
+        margin-left:0px;
+        margin-right:0px;
+        width:100%;
+        
+    }
+    .raw_normal{
+        flex-wrap:wrap;
+        width:100%;
+    }
+    .raw_normal_image_big{
+        width:100%;
+        margin-left:0px;
+        margin-right:0px;
+        background-size: cover;
+    }
+    .raw_normal_image_mid{
+        width:100%;
+        margin-left:0px;
+        margin-right:0px;
+        background-size: cover;
+    }
+    .desktop_menu {
+        display:none;
+    }
+    
+    .mobile_menu{
+        display:block;
+    }
+
+}
