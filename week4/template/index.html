@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+    <script src="{{ url_for('static', path='/script.js') }}"></script>
+    <script>
+        let square = function() {
+        let numberInput = document.getElementById("number").value;
+        let form = document.getElementById("squareForm");
+        form.action = "/square/" + numberInput;
+        form.submit();
+    }
+    </script>
+</head>
+<body>
+    
+    <div class="header">歡迎光臨, 請輸入帳號密碼</div>
+    
+    <div class="login">
+        <h3>登入帳戶</h3>
+        <form method="POST" id="loginForm" action="/signin">
+            <label for="username">帳號：</label>
+            <input type="text" id="username" name="username" required><br>
+    
+            <label for="password">密碼：</label>
+            <input type="password" id="password" name="password" required><br>
+            <label for="chekbox">同意條款</label>
+            <input type="checkbox" name="checkbox" id="checkbox" ><br>
+            <button type="button" onclick = "checkBox()" value="Submit form">登入</button>
+        </form>
+        <h3>計算正整數的平方</h3>
+        <form id="squareForm" method="get">
+            <label for="number">正整數</label>
+            <input type="text" id="number" name="number" /><br>
+            <button type="button" onclick="square()" >計算</button>
+        </form>
+    </div>
+    
+    
+</body>
+</html>
