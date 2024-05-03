@@ -53,25 +53,25 @@ SELECT * FROM member WHERE name LIKE '%es%';
 
 #8
 ```
-SELECT *FROM member LIMIT 3 OFFSET 1;
+SELECT *FROM member WHERE username = 'test' AND password = 'test';
 ```
 ![1](https://raw.githubusercontent.com/betty791118/wehelp_stage1/main/week5/8.png)
 
 #9
 ```
-SELECT *FROM member WHERE username = 'test' AND password = 'test';
+UPDATE member SET name="test2" WHERE username='test';
 ```
 ![1](https://raw.githubusercontent.com/betty791118/wehelp_stage1/main/week5/9.png)
 
 #10
 ```
-UPDATE member SET name="test2" WHERE username='test';
+SELECT COUNT(*) FROM member;
 ```
 ![1](https://raw.githubusercontent.com/betty791118/wehelp_stage1/main/week5/10.png)
 
 #11
 ```
-SELECT COUNT(*) FROM member;
+SELECT SUM(follower_count) FROM member;
 ```
 ![1](https://raw.githubusercontent.com/betty791118/wehelp_stage1/main/week5/11.png)
 
