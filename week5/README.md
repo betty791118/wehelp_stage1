@@ -129,7 +129,7 @@ SELECT message.id, message.member_id, message.content, message.like_count, messa
 ```
 SELECT AVG(like_count) FROM message JOIN member ON message.member_id = member.id where member.username = 'test';
 ```
-![1](https://raw.githubusercontent.com/betty791118/wehelp_stage1/main/week5/17_2.png)
+![1](https://raw.githubusercontent.com/betty791118/wehelp_stage1/main/week5/18.png)
 
 
 #19
@@ -138,13 +138,6 @@ SELECT member.username, AVG(like_count) FROM message
 JOIN member ON message.member_id = member.id 
 group by username;
 ```
-![1](https://raw.githubusercontent.com/betty791118/wehelp_stage1/main/week5/18.png)
+![1](https://raw.githubusercontent.com/betty791118/wehelp_stage1/main/week5/19.png)
 
 
-#20
-```
-SELECT member.username, AVG(like_count) FROM message 
-JOIN member ON message.member_id = member.id 
-group by username;
-```
-![1](https://raw.githubusercontent.com/betty791118/wehelp_stage1/main/week5/19png)
