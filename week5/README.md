@@ -6,7 +6,7 @@ USE website;
 ![1](https://raw.githubusercontent.com/betty791118/wehelp_stage1/main/week5/create%20db_again.png)
 
 #2
-'''
+```
 CREATE TABLE `member` (
     `id` BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL UNIQUE,
     `name` VARCHAR(255) NOT NULL,
@@ -15,31 +15,35 @@ CREATE TABLE `member` (
     `follower_count` INT UNSIGNED NOT NULL DEFAULT 0,
     `time` DATETIME(0) DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP NOT NULL
 );
-'''
-
+```
+![1](https://raw.githubusercontent.com/betty791118/wehelp_stage1/main/week5/2.png)
 #3
-'''
+```
 INSERT INTO member (name, username, password) VALUES ('test', 'test', 'test');
 INSERT INTO member (name, username, password) VALUES ('cindy', 'cindy1', '1234');
 INSERT INTO member (name, username, password) VALUES ('betty', 'betty2', '1234');
 INSERT INTO member (name, username, password) VALUES ('peter', 'peter3', '1234');
 INSERT INTO member (name, username, password) VALUES ('lulu', 'lulu4', '1234');
-'''
+```
+![1](https://raw.githubusercontent.com/betty791118/wehelp_stage1/main/week5/3.png)
 
 #4
-'''
+```
 SELECT *FROM member ORDER BY time DESC;
-'''
+```
+![1](https://raw.githubusercontent.com/betty791118/wehelp_stage1/main/week5/4.png)
 
 #5
-'''
+```
 SELECT *FROM member ORDER BY time DESC LIMIT 3 OFFSET 1;
 '''
+![1](https://raw.githubusercontent.com/betty791118/wehelp_stage1/main/week5/5.png)
 
 #6
-'''
+```
 SELECT * FROM member WHERE username='test'
-'''
+```
+![1](https://raw.githubusercontent.com/betty791118/wehelp_stage1/main/week5/6.png)
 #7
 '''
 SELECT * FROM member WHERE name LIKE '%es%';
