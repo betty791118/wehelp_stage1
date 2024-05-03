@@ -77,19 +77,26 @@ SELECT SUM(follower_count) FROM member;
 
 #12
 ```
-SELECT SUM(follower_count) FROM member;
+SELECT AVG(follower_count) FROM member;
 ```
 ![1](https://raw.githubusercontent.com/betty791118/wehelp_stage1/main/week5/12.png)
 
 #13
 ```
-SELECT AVG(follower_count) FROM member;
+SELECT *FROM member ORDER BY follower_count DESC LIMIT 2;
 ```
 ![1](https://raw.githubusercontent.com/betty791118/wehelp_stage1/main/week5/13.png)
 
 #14
 ```
-SELECT *FROM member ORDER BY follower_count DESC LIMIT 2;
+CREATE TABLE `message` (
+    `id` BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL UNIQUE,
+    `member_id` BIGINT NOT NULL,
+    FOREIGN KEY (`member_id`) REFERENCES `member`(`id`),
+    `content` VARCHAR(255) NOT NULL,
+    `like_count` INT UNSIGNED NOT NULL DEFAULT 0,
+    `time` DATETIME(0) DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP NOT NULL
+);
 ```
 ![1](https://raw.githubusercontent.com/betty791118/wehelp_stage1/main/week5/14.png)
 
