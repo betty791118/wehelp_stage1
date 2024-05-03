@@ -36,7 +36,7 @@ SELECT *FROM member ORDER BY time DESC;
 #5
 ```
 SELECT *FROM member ORDER BY time DESC LIMIT 3 OFFSET 1;
-'''
+```
 ![1](https://raw.githubusercontent.com/betty791118/wehelp_stage1/main/week5/5.png)
 
 #6
@@ -44,48 +44,57 @@ SELECT *FROM member ORDER BY time DESC LIMIT 3 OFFSET 1;
 SELECT * FROM member WHERE username='test'
 ```
 ![1](https://raw.githubusercontent.com/betty791118/wehelp_stage1/main/week5/6.png)
+
 #7
-'''
+```
 SELECT * FROM member WHERE name LIKE '%es%';
-'''
+```
+![1](https://raw.githubusercontent.com/betty791118/wehelp_stage1/main/week5/7.png)
 
 #8
-'''
+```
 SELECT *FROM member LIMIT 3 OFFSET 1;
-'''
+```
+![1](https://raw.githubusercontent.com/betty791118/wehelp_stage1/main/week5/8.png)
 
 #9
-'''
+```
 SELECT *FROM member WHERE username = 'test' AND password = 'test';
-'''
+```
+![1](https://raw.githubusercontent.com/betty791118/wehelp_stage1/main/week5/9.png)
 
 #10
-'''
+```
 UPDATE member SET name="test2" WHERE username='test';
-'''
+```
+![1](https://raw.githubusercontent.com/betty791118/wehelp_stage1/main/week5/10.png)
 
 #11
-'''
+```
 SELECT COUNT(*) FROM member;
-'''
+```
+![1](https://raw.githubusercontent.com/betty791118/wehelp_stage1/main/week5/11.png)
 
 #12
-'''
+```
 SELECT SUM(follower_count) FROM member;
-'''
+```
+![1](https://raw.githubusercontent.com/betty791118/wehelp_stage1/main/week5/12.png)
 
 #13
-'''
+```
 SELECT AVG(follower_count) FROM member;
-'''
+```
+![1](https://raw.githubusercontent.com/betty791118/wehelp_stage1/main/week5/13.png)
 
 #14
-'''
+```
 SELECT *FROM member ORDER BY follower_count DESC LIMIT 2;
-'''
+```
+![1](https://raw.githubusercontent.com/betty791118/wehelp_stage1/main/week5/14.png)
 
 #15
-'''
+```
 CREATE TABLE `message` (
     `id` BIGINT PRIMARY KEY AUTO_INCREMENT NOT NULL UNIQUE,
     `member_id` BIGINT NOT NULL,
@@ -94,9 +103,11 @@ CREATE TABLE `message` (
     `like_count` INT UNSIGNED NOT NULL DEFAULT 0,
     `time` DATETIME(0) DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP NOT NULL
 );
-'''
+```
+![1](https://raw.githubusercontent.com/betty791118/wehelp_stage1/main/week5/15_2.png)
+
 #16
-'''
+```
 INSERT INTO message (member_id, content, like_count) VALUES (1, 'I am so happy', 10);
 INSERT INTO message (member_id, content, like_count) VALUES (2, 'This is not good', 100);
 INSERT INTO message (member_id, content, like_count) VALUES (3, 'It is so hard', 50);
@@ -105,25 +116,33 @@ INSERT INTO message (member_id, content, like_count) VALUES (5, 'Let''s quit', 2
 INSERT INTO message (member_id, content, like_count) VALUES (2, 'why??', 300);
 INSERT INTO message (member_id, content, like_count) VALUES (4, 'What!', 120);
 INSERT INTO message (member_id, content, like_count) VALUES (3, 'OMG', 10);
-'''
+```
+![1](https://raw.githubusercontent.com/betty791118/wehelp_stage1/main/week5/16_2.png)
 
 #17
-'''
+```
 SELECT message.id, message.member_id, message.content, message.like_count, message.time, member.name FROM message JOIN member ON message.member_id = member.id;
-'''
+```
+![1](https://raw.githubusercontent.com/betty791118/wehelp_stage1/main/week5/17_2.png)
+
 #18
-'''
+```
 SELECT message.id, message.member_id, message.content, message.like_count, message.time, member.name FROM message JOIN member ON message.member_id = member.id where member.username = 'test';
-'''
+```
+![1](https://raw.githubusercontent.com/betty791118/wehelp_stage1/main/week5/17_2.png)
+
 
 #19
-'''
+```
 SELECT AVG(like_count) FROM message JOIN member ON message.member_id = member.id where member.username = 'test';
-'''
+```
+![1](https://raw.githubusercontent.com/betty791118/wehelp_stage1/main/week5/18.png)
+
 
 #20
-'''
+```
 SELECT member.username, AVG(like_count) FROM message 
 JOIN member ON message.member_id = member.id 
 group by username;
-'''
+```
+![1](https://raw.githubusercontent.com/betty791118/wehelp_stage1/main/week5/19png)
