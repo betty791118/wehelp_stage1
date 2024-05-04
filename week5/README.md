@@ -83,9 +83,16 @@ SELECT AVG(follower_count) FROM member;
 
 #13
 ```
-SELECT *FROM member ORDER BY follower_count DESC LIMIT 2;
+SELECT AVG(follower_count) AS average_followers
+FROM (
+    SELECT follower_count
+    FROM member
+    ORDER BY follower_count DESC
+    LIMIT 2
+) AS top_two_followers;
+
 ```
-![1](https://raw.githubusercontent.com/betty791118/wehelp_stage1/main/week5/13.png)
+![1](https://raw.githubusercontent.com/betty791118/wehelp_stage1/main/week5/13_2.png)
 
 #14
 ```
